@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Девайс: Каталог товаров</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="" class="logo"><img src="http://placehold.it/150x100" alt="logo"></a>
+
+            <div class="header-user-menu">
+                <div class="search">
+                    <!--Я не знаю что сюда надописать -->
+                </div>
+                <ul class="user-menu_list">
+                    <li class="user-menu_item"><a href="#">Войти</a></li>
+                    <li class="user-menu_item"><a href="#">Сравнить</a></li>
+                    <li class="user-menu_item"><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu_list">
+                    <li class="main-menu_item"><a href="#">Каталог товаров</a></li>
+                    <li class="main-menu_item"><a href="#">Доставка</a></li>
+                    <li class="main-menu_item"><a href="#">Гарантия</a></li>
+                    <li class="main-menu_item"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <header class="catalog-header">
+            <h1 class="catalog-name">Моноподы для серфи</h1>
+            <div class="catalog-breadcrumbs">
+                <ul class="catalog-breadcrumbs-list">
+                    <li class="breadcrumbs_item"><a href="#">Главная</a></li>
+                    <li class="breadcrumbs_item"><a href="#">Каталог товаров</a></li>
+                    <li class="breadcrumbs_item"><a href="#">Моноподы для серфи</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="catalog-container">
+            <header class="catalog-filters-header">
+                <b>Фильтр:</b>
+            </header>
+            <section class="catalog-filters">
+                <form method="post">
+                    <fieldset>
+                        <p>Стоимость</p>
+                        <label for="item-price-range"></label>
+                        <!--Вообще тут нужно что-то другое сделать. слайдер с двумя ползункамию-->
+                        <input type="range" id="item-price-range" name="item-price-range">
+                    </fieldset>
+                    <fieldset>
+                        <p>Цвет</p>
+                        <label for="items-color-black">Черный</label>
+                        <input type="checkbox" id="items-color-black" name="items-color-black">
+                        <label for="items-color-white">Белый</label>
+                        <input type="checkbox" id="items-color-white" name="items-color-white">
+                        <label for="items-color-blue">Синий</label>
+                        <input type="checkbox" id="items-color-blue" name="items-color-blue">
+                        <label for="items-color-red">Красный</label>
+                        <input type="checkbox" id="items-color-red" name="items-color-red">
+                        <label for="items-color-pink">Розовый</label>
+                        <input type="checkbox" id="items-color-pink" name="items-color-pink">
+
+                    </fieldset>
+                    <fieldset>
+                        <p>Bluetooth</p>
+                        <label for="items-bluetooth-yes">Есть</label>
+                        <input type="radio" id="items-type-yes" name="items-bluetooth-yes">
+                        <label for="items-bluetooth-yes">Нет</label>
+                        <input type="radio" id="items-bluetooth-no" name="items-bluetooth-no">
+                    </fieldset>
+                    <button type="submit">Показать</button>
+                </form>
+            </section>
+            <header class="catalog-items-header">
+                <b>Сортировка:</b>
+            </header>
+            <section class="catalog-items">
+                <article class="catalog-item-1">
+                    <div class="item-img-container">
+                        <img src="http://placehold.it/300x300" alt="simple self-stick">
+                    </div>
+                    <a class="item-name" href="#">
+                        <h3>Любительская селфи-палка</h3>
+                    </a>
+                    <p class="item-price">500 руб.</p>
+                </article>
+                <article class="catalog-item-2">
+                    <div class="item-img-container">
+                        <img src="http://placehold.it/300x300" alt="prof self-stick">
+                    </div>
+                    <a class="item-name" href="#">
+                        <h3>Профессиональная селфи-палка</h3>
+                    </a>
+                    <p class="item-price">1500 руб.</p>
+                </article>
+                <article class="catalog-item-3">
+                    <div class="item-img-container">
+                        <img src="http://placehold.it/300x300" alt="unsinkable self-stick">
+                    </div>
+                    <a class="item-name" href="#">
+                        <h3>Непотопляемая селфи-палка</h3>
+                    </a>
+                    <p class="item-price">2500 руб.</p>
+                </article>
+                <article class="catalog-item-4">
+                    <div class="item-img-container">
+                        <img src="http://placehold.it/300x300" alt="followme self-stick">
+                    </div>
+                    <a class="item-name" href="#">
+                        <h3>Селфи-палка "Следуй за мной"</h3>
+                    </a>
+                    <p class="item-price">4900 руб.</p>
+                </article>
+
+                <div class="catalog-items-nav-panel">
+                    <a href="#" class="items-prev-page">Вперед</a>
+                    <ul class="catalog-pages_list">
+                        <li class="catalog-pages_item"><a href="">1</a></li>
+                        <li class="catalog-pages_item"><a href="">2</a></li>
+                        <li class="catalog-pages_item"><a href="">3</a></li>
+                    </ul>
+                    <a href="#" class="items-next-page">Назад</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <a href="" class="footer-logo"><img src="" alt=""></a>
+            <div class="footer-user-menu">
+                <ul class="user-menu_list">
+                    <li class="user-menu_item"><a href="#">Войти</a></li>
+                    <li class="user-menu_item"><a href="#">Сравнить</a></li>
+                    <li class="user-menu_item"><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+            <p>г. Москва, ул. Строителей, 15 </p>
+            <div class="footer-buying-info">
+                <ul class="buying-info_list">
+                    <li class="buying-info_item"><a href="#">Доставка</a></li>
+                    <li class="buying-info_item"><a href="#">Гарантия</a></li>
+                    <li class="buying-info_item"><a href="#">Кредит</a></li>
+                </ul>
+            </div>
+            <p>Тел.: +7 (495) 495-95-95</p>
+            <div class="footer-social">
+                <a href="#" class="vk"></a>
+                <a href="#" class="facebook"></a>
+                <a href="#" class="twitter"></a>
+            </div>
+            <a href="" class="footer-htmlAcademy-logo"><img src="" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>
