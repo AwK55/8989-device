@@ -1,59 +1,97 @@
-
 @font-face {
   font-family: 'Gilroy Extrabold';
   src: url('fonts/gilroyextrabold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/gilroyextrabold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('fonts/gilroyextrabold.woff') format('woff'), /* Pretty Modern Browsers */
 }
 
 @font-face {
   font-family: 'Gilroy light';
-  src: url('fonts/gilroylight.woff2') format('woff2'),
-       url('fonts/gilroylight.woff') format('woff'),
+  src: url('fonts/gilroylight.woff2') format('woff2'), url('fonts/gilroylight.woff') format('woff'),
 }
 
 @font-face {
   font-family: 'Opensans';
   src: url('fonts/opensans.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/opensans.woff') format('woff'), /* Pretty Modern Browsers */
+  url('fonts/opensans.woff') format('woff'), /* Pretty Modern Browsers */
 }
 
 @font-face {
   font-family: 'Opensans light';
-  src: url('fonts/opensanslight.woff2') format('woff2'),
-       url('fonts/opensanslight.woff') format('woff'),
+  src: url('fonts/opensanslight.woff2') format('woff2'), url('fonts/opensanslight.woff') format('woff'),
 }
 
-
-body{
-    font-size: 15px;
-    font-family: 'Opensans', sans-serif;
-    line-height: 30px;
-    color: rgb(70,70,70);
+body {
+  font-size: 15px;
+  font-family: 'Opensans', sans-serif;
+  line-height: 30px;
+  color: rgb(70, 70, 70);
+  width: 1200px;
+  margin: 20px auto;
 }
 
-.logo{
-    font-size: 48px;
-    font-family: 'Gilroy Extrabold', sans-serif;
-    color: black;
-    letter-spacing: 10;
-    text-transform: uppercase;
+.main-header {
+  padding: 0px 20px;
+  
+}
+
+.container {
+  padding: 0 60px;
+}
+
+.header-user-menu {
+  display: flex;
+  justify-content: space-between;
+}
+main{
+    padding: 0px 20px;
+}
+
+.slider {
+  padding-right: 60px;
+}
+
+.slider-item {
+  display: flex;  
+}
+/*Непонятно как здесь выравнивать картинку. 
+они все расположены как бог на душу положет*/
+.slider-img-container{
+    flex-basis: 560px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.slider-img-container img{
+    display: block;
+    margin: 0 auto;
+}
+.item-about{
+    /*padding-right:20px;*/
+    padding-left: 20px;
+}
+
+.logo {
+  font-size: 48px;
+  font-family: 'Gilroy Extrabold', sans-serif;
+  color: black;
+  letter-spacing: 10;
+  text-transform: uppercase;
 }
 
 .buying-info-delivery h2,
-.catalog-header h2{
-    font-size: 47px;
-    font-family: 'Gilroy Extrabold', sans-serif;
-    color: black;
-    letter-spacing: 10;
-    text-transform: uppercase;
+.catalog-header h2 {
+  font-size: 47px;
+  font-family: 'Gilroy Extrabold', sans-serif;
+  color: black;
+  letter-spacing: 10;
+  text-transform: uppercase;
 }
 
 .device-types h3,
 .catalog-items h3,
-fieldset p{
-    font-size: 18px;
-    font-family: 'Gilroy Extrabold', sans-serif;
-    color: black;
-    letter-spacing: 10;
-    text-transform: uppercase;
+fieldset p {
+  font-size: 18px;
+  font-family: 'Gilroy Extrabold', sans-serif;
+  color: black;
+  letter-spacing: 10;
+  text-transform: uppercase;
 }
