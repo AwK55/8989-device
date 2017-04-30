@@ -27,7 +27,7 @@
         <ul class="catalog__list">
           <li class="catalog__list-item">
             <a href="#">Каталог товаров</a>
-            <ul class="menu-item-catalog">
+            <ul class="menu-item-catalog--hover">
               <li><a href="#">Виртуальная Реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн камеры</a></li>
@@ -46,7 +46,7 @@
   <main>
     <section class="slider">
       <ul class="slider-list">
-        <li class="slider-list__menu-item-1">
+        <li class="slider-list__menu-item">
           <div class="slider-item-container">
             <div class="slider-img-container">
               <img class="slider-img-container__img" src="img/item/slider-1.png" alt="">
@@ -54,23 +54,25 @@
             <div class="item-about">
               <b class="item-about__promo-header">Порхает как бабочка, жалит как пчела</b>
               <p class="item-about__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
-              <a href="#" class="action-btn item-about__read-more">Подробнее</a>
+              <a href="#" class="btn item-about__read-more-btn">Подробнее</a>
               <div class="item-features">
-                <div class="item-feature item-features__1">
-                  <p class="item-features__param">800 м</p>
-                  <p class="item-features__descr">Дальность полета</p>
+                <div class="item-feature">
+                  <p class="item-feature__param">800 м</p>
+                  <p class="item-feature__descr">Дальность полета</p>
                 </div>
-                <div class="item-feature item-features__2">
-                  <p class="item-features__param">50 м</p>
-                  <p class="item-features__descr">Радиус поражения</p>
+                <div class="item-feature">
+                  <p class="item-feature__param">50 м</p>
+                  <p class="item-feature__descr">Радиус поражения</p>
                 </div>
               </div>
             </div>
+            <p class="slider-item__number">01</p>
           </div>
         </li>
-        <li class="slider-list__menu-item-2"></li>
-        <li class="slider-list__menu-item-3"></li>
-        <li class="slider-list__menu-item-4"></li>
+        <!--Dont forget add content of other slides-->
+        <li class="slider-list__menu-item"></li>
+        <li class="slider-list__menu-item"></li>
+        <li class="slider-list__menu-item"></li>
       </ul>
     </section>
     <section class="device-type-cards">

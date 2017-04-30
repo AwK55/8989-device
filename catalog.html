@@ -17,7 +17,8 @@
           <input class="search-form__submit" type="submit" value="Найти">
         </form>
         <ul class="user-menu header-user-menu">
-          <li class="user-menu__item"><a href="#">Войти</a></li>
+          <li class="user-menu__item user-menu__acc-name"><a href="#">Валентин Петухов</a></li>
+          <li class="user-menu__item"><a href="#">Выйти</a></li>
           <li class="user-menu__item"><a href="#">Сравнить</a></li>
           <li class="user-menu__item"><a href="#">Корзина</a></li>
         </ul>
@@ -26,7 +27,7 @@
         <ul class="catalog__list">
           <li class="catalog__list-item">
             <a href="#">Каталог товаров</a>
-            <ul class="menu-item-catalog">
+            <ul class="menu-item-catalog--hover">
               <li><a href="#">Виртуальная Реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн камеры</a></li>
@@ -43,30 +44,28 @@
   </header>
   <main>
     <header class="catalog-header">
-      <h2 class="catalog-header__name">Моноподы для селфи</h2>
-      <div class="catalog-breadcrumbs">
-        <ul class="catalog-breadcrumbs__list">
-          <li class="catalog-breadcrumbs__item"><a href="#">Главная</a></li>
-          <li class="catalog-breadcrumbs__item"><a href="#">Каталог товаров</a></li>
-          <li class="catalog-breadcrumbs__item"><a href="#">Моноподы для серфи</a></li>
-        </ul>
-      </div>
+      <h1 class="catalog-header__name">Моноподы для селфи</h2>
+        <div class="catalog-breadcrumbs">
+          <ul class="catalog-breadcrumbs__list">
+            <li class="catalog-breadcrumbs__item"><a href="#">Главная</a></li>
+            <li class="catalog-breadcrumbs__item"><a href="#">Каталог товаров</a></li>
+            <li class="catalog-breadcrumbs__item"><a href="#">Моноподы для серфи</a></li>
+          </ul>
+        </div>
     </header>
 
     <div class="catalog">
-      <header class="catalog__filters-header">
-        <b>Фильтр:</b>
-      </header>
       <section class="filters">
+        <b class="filters__header">Фильтр:</b>
         <form method="post">
           <fieldset class="filter filter-by-cost">
-            <p class="filter__name">Стоимость</p>
+            <legend class="filter__name">Стоимость</legend>
             <label class="filter__label" class="filter__label" for="filter__range"></label>
-            <!--Вообще тут нужно что-то другое сделать. слайдер с двумя ползункамию-->
+            <!--Пока так, как покажут, как сделать фильтр с двумя ползунками -поправлю-->
             <input class="filter__range" type="range" id="filter__range" name="filter__range">
           </fieldset>
           <fieldset class="filter filter-color">
-            <p class="filter__name">Цвет</p>
+            <legend class="filter__name">Цвет</legend>
             <label class="filter__label" for="filter-color-black">Черный</label>
             <input class="filter__checkbox" type="checkbox" id="filter-color-black" name="filter-color-black">
             <label class="filter__label" for="filter-color-white">Белый</label>
@@ -80,31 +79,39 @@
 
           </fieldset>
           <fieldset class="filter filter-bluetooth">
-            <p class="filter__name">Bluetooth</p>
+            <legend class="filter__name">Bluetooth</legend>
             <label class="filter__label" for="filter-bluetooth-yes">Есть</label>
             <input class="filter__radio" type="radio" id="items-type-yes" name="filter-bluetooth-yes">
             <label class="filter__label" for="filter-bluetooth-yes">Нет</label>
             <input class="filter__radio" type="radio" id="filter-bluetooth-no" name="filter-bluetooth-no">
           </fieldset>
-          <button class="action-btn submit-btn" type="submit">Показать</button>
+          <button class="btn submit-btn" type="submit">Показать</button>
         </form>
       </section>
-      <header class="catalog__items-header">
-        <b>Сортировка:</b>
-        <ul class="sort catalog__sort">
+      <section class="catalog__items">
+        <div class="catalog__sorting-panel">
+          <b>Сортировка:</b>
+          <ul class="sort catalog__sort">
             <li class="sort-type-1 catalog__sort-type-1"></li>
             <li class="sort-type-2 catalog__sort-type-2"></li>
             <li class="sort-type-3 catalog__sort-type-3"></li>
-        </ul>
-        <ul class="sort-order catalog__sort-order">
-            <li class="sort-order--asc"><a href="#"></a></li>
-            <li class="sort-order--desc"><a href="#"></a></li>
-        </ul>
-      </header>
-      <section class="catalog__items">
+          </ul>
+          <ul class="sort-order catalog__sort-order">
+            <li class="sort-order--asc">
+              <a href="#"></a>
+            </li>
+            <li class="sort-order--desc">
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
         <article class="item-card">
           <div class="item-card__img-container">
             <img class="item-card__img" src="img/item-1.jpg" alt="simple self-stick">
+            <div class="item-card__actions--hover">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+            </div>
           </div>
           <a class="item-card__ref" href="#">
             <h3 class="item-card__name">Любительская селфи-палка</h3>
@@ -114,6 +121,10 @@
         <article class="item-card">
           <div class="item-card__img-container">
             <img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick">
+            <div class="item-card__actions--hover">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+            </div>
           </div>
           <a class="item-card__ref" href="#">
             <h3 class="item-card__name">Профессиональная селфи-палка</h3>
@@ -123,6 +134,10 @@
         <article class="item-card">
           <div class="item-card__img-container">
             <img class="item-card__img" src="img/item-3.jpg" alt="unsinkable self-stick">
+            <div class="item-card__actions--hover">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+            </div>
           </div>
           <a class="item-card__ref" href="#">
             <h3 class="item-card__name">Непотопляемая селфи-палка</h3>
@@ -132,14 +147,18 @@
         <article class="item-card">
           <div class="item-card__img-container">
             <img class="item-card__img" src="img/item-4.jpg" alt="followme self-stick">
+            <div class="item-card__new">New</div>
+            <div class="item-card__actions--hover">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+            </div>
           </div>
           <a class="item-card__ref" href="#">
             <h3 class="item-card__name">Селфи-палка "Следуй за мной"</h3>
           </a>
           <p class="item-card__price">4900 руб.</p>
         </article>
-
-        <div class="catalog_pages-panel">
+        <div class="catalog__pages-panel">
           <a href="#" class="catalog__prev-page">Вперед</a>
           <ul class="catalog-pages__list">
             <li class="catalog-pages__item"><a href="">1</a></li>
