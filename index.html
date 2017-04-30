@@ -25,7 +25,7 @@
       </div>
       <nav class="catalog">
         <ul class="catalog__list">
-          <li class="catalog_menu-item">
+          <li class="catalog__list-item">
             <a href="#">Каталог товаров</a>
             <ul class="menu-item-catalog">
               <li><a href="#">Виртуальная Реальность</a></li>
@@ -35,9 +35,9 @@
               <li><a href="#">умные часы</a></li>
             </ul>
           </li>
-          <li class="catalog_menu-item"><a href="#">Доставка</a></li>
-          <li class="catalog_menu-item"><a href="#">Гарантия</a></li>
-          <li class="catalog_menu-item"><a href="#">Контакты</a></li>
+          <li class="catalog__list-item"><a href="#">Доставка</a></li>
+          <li class="catalog__list-item"><a href="#">Гарантия</a></li>
+          <li class="catalog__list-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -144,9 +144,13 @@
         <a href="#" class="about-us-more">Подробнее о нас</a>
       </section>
       <section class="contacts">
-        <h2 class="descr contacts__header">Контакты</h2>
+        <h2 class="contacts__header">Контакты</h2>
         <p class="descr contacts__descr">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="contacts-map" id="map"></div>
+        <div class="contacts-map" id="map">
+          <a href="#" class="contacts-map__ref">
+            <img src="" alt="" class="contacts-map__img">
+          </a>
+        </div>
         <a href="#" class="contacts-feedback">Напишите нам</a>
       </section>
     </div>
