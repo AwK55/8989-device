@@ -181,6 +181,7 @@ main{
 .item-about__promo-header{
   position: relative;
    font-family: 'Gilroy Extrabold', sans-serif;
+   color: black;
    font-size: 47px;
    z-index: 4;
 }
