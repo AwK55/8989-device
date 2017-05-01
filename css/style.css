@@ -1,56 +1,151 @@
 @font-face {
   font-family: 'Gilroy Extrabold';
-  src: url('fonts/gilroyextrabold.woff2') format('woff2'), /* Super Modern Browsers */
-  url('fonts/gilroyextrabold.woff') format('woff'), /* Pretty Modern Browsers */
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/gilroyextrabold.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
 @font-face {
   font-family: 'Gilroy light';
-  src: url('fonts/gilroylight.woff2') format('woff2'), url('fonts/gilroylight.woff') format('woff'),
+  src: url('../fonts/gilroylight.woff2') format('woff2'), url('../fonts/gilroylight.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Opensans';
-  src: url('fonts/opensans.woff2') format('woff2'), /* Super Modern Browsers */
-  url('fonts/opensans.woff') format('woff'), /* Pretty Modern Browsers */
+  src: url('../fonts/opensans.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/opensans.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
 @font-face {
   font-family: 'Opensans light';
-  src: url('fonts/opensanslight.woff2') format('woff2'), url('fonts/opensanslight.woff') format('woff'),
+  src: url('../fonts/opensanslight.woff2') format('woff2'), url('../fonts/opensanslight.woff') format('woff');
 }
-
 body {
   font-size: 15px;
   font-family: 'Opensans', sans-serif;
   line-height: 30px;
   color: rgb(70, 70, 70);
-  width: 1200px;
-  margin: 20px auto;
 }
 
+*[class$="--hover"]{
+  display: none;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/*Header */
 .main-header {
-  padding: 0px 20px;
+  background-color: rgb(247, 226, 150);
+  min-height: 300px;
+  margin-top: 40px;
+  padding: 0 60px;
+}
+.main-header__header-container{
+  padding-top: 45px;
+}
+
+.main-header__user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:30px;
+}
+
+.menu-item-catalog--hover{
+  display: none;
+}
+.search-form{
+  width: 250px;
+}
+.user-menu{
+  font-size: 0;
+  list-style: none;
+}
+.main-header__user-menu{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;  
+}
+.user-menu__item{
+   display: inline-block;
+   font-size: 15px;
+   margin-right: 40px;
+}
+.user-menu__item:last-child{
+  margin-right:0px;
+}
+.main-header__user-menu .user-menu__item:nth-child(1){
+  margin-right: 210px;
+}
+.main-header__user-menu .user-menu__item:nth-child(2){
+  margin-right: 40px;
+}
+.catalog-menu{
+  width: 1050px;
+}
+.catalog__list{
+   list-style: none;
+   display: flex;
+}
+.catalog__list-item{
+  font-size: 18px; 
+  margin-right: 40px; 
+}
+.catalog__list-item:first-child{
+  margin-right: 329px;
+}
+.catalog__list-item:last-child{
+  margin-left: 78px;
+  margin-right: 0px;
   
 }
 
-.container {
-  padding: 0 60px;
+.logo {
+  display: block;
+  
+  font-size: 48px;
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.header-user-menu {
-  display: flex;
-  justify-content: space-between;
+.logo--black{
+  color: black;
+  position: absolute;
+  top: 25px;  
 }
+
+.catalog-menu{
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+/* Main block*/
 main{
-    padding: 0px 20px;
+    /*width: 1160px;*/
+    /*padding: 0px 20px;*/
 }
-
 .slider {
   padding-right: 60px;
+  margin-top: -110px;
+  margin-bottom: 106px;
+}
+.slider-list{
+  list-style: none;
 }
 
-.slider-item {
+.slider-item__container{
   display: flex;  
 }
 /*Непонятно как здесь выравнивать картинку. 
@@ -58,40 +153,237 @@ main{
 .slider-img-container{
     flex-basis: 560px;
     flex-shrink: 0;
-    margin-right: 20px;
 }
-.slider-img-container img{
+.slider-img-container__img{
     display: block;
     margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .item-about{
     /*padding-right:20px;*/
-    padding-left: 20px;
+    padding-left: 40px;
+    padding-top: 90px;
 }
-
-.logo {
-  font-size: 48px;
+.item-about__text{
+  margin-bottom: 55px;
+}
+.slider-item__number{
+  position: absolute;
   font-family: 'Gilroy Extrabold', sans-serif;
-  color: black;
-  letter-spacing: 10;
-  text-transform: uppercase;
+  font-size: 179px;
+  color: white;
+  right: 200px;
+  top: 113px;
+  z-index: 0;
+}
+.item-about__promo-header{
+  position: relative;
+   font-family: 'Gilroy Extrabold', sans-serif;
+   font-size: 47px;
+   z-index: 4;
+}
+.item-features{
+ display: flex;
+  justify-content: space-between;
+}
+.item-feature{
+}
+.item-feature__param{
+  font-family: 'Gilroy light', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.item-feature__descr{
+  font-size: 13px;
 }
 
-.buying-info-delivery h2,
-.catalog-header h2 {
-  font-size: 47px;
-  font-family: 'Gilroy Extrabold', sans-serif;
-  color: black;
-  letter-spacing: 10;
-  text-transform: uppercase;
-}
 
-.device-types h3,
-.catalog-items h3,
-fieldset p {
+.device-type-cards{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+.device-type-card{
+  width: 160px;
+}
+.device-type-card__img{  
+  background-color: rgb(247, 226, 150);
+  width: 160px;
+  height: 160px;
+  margin-bottom: 28px; 
+}
+.device-type-card__name{
+  font-family: 'Gilroy Extrabold', sans-serif;  
   font-size: 18px;
-  font-family: 'Gilroy Extrabold', sans-serif;
-  color: black;
-  letter-spacing: 10;
+  line-height: 1.2;
+}
+.services{
+  background-color: #e5e5e5;  
+  min-height: 290px;
+  margin-bottom: 95px;    
+}
+
+.services__container{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.services__menu{
+  flex-basis: 300px;
+  margin-top: -15px;
+
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  font-size: 18px;
   text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.services__menu-list{
+  list-style: none;
+
+}
+.services_menu-item{
+  width: 160px; 
+  min-height: 42px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.services__description{
+  flex-basis: 760px;
+   margin-top: -55px;
+}
+.services__description div{
+  width: 460px;
+}
+
+.services__description-item h2{
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  font-size: 47px;
+  color: black;
+}
+
+.brands {
+  min-height: 285px;
+}
+
+.contact-info{
+display: flex;
+justify-content: space-between;
+margin-bottom: 94px;
+}
+.about-us{
+  width: 480px;  
+}
+.about-us__descr{
+  margin-bottom: 35px;
+}
+.about-us__descr:nth-of-type(2){
+  margin-bottom: 60px;
+}
+.delivery-comp{
+  list-style: none;
+}
+.about-us h2,
+.contacts h2{
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  font-size: 47px;
+  color: black;
+}
+.contacts{
+  width: 560px;
+}
+.contacts__descr{
+  margin-bottom: 45px;
+}
+.contacts-map,
+.delivery-comp{
+  margin-bottom: 82px;
+}
+
+/*footer*/
+.main-footer{
+  background-color: #464646;
+  min-height: 325px;
+}
+.main-footer a,
+.main-footer p{
+  color: white;
+}
+.main-footer__container{
+  padding-top: 65px;
+}
+.container__row{
+  display: flex;
+  justify-content: space-between;
+}
+.container__row-1{
+  margin-bottom: 20px;
+}
+.services-menu{
+  font-size: 0px;
+}
+.services-menu:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.services-menu__item{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 35px;
+
+  font-family: 'Gilroy Extrabold', sans-serif;  
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.services-menu__item:last-child{
+  margin-right: 0;
+}
+
+.main-footer .logo--yellow{
+  color: #ffc600;
+}
+
+/*catalog.html*/
+.catalog-main{
+   
+}
+.catalog-main__wrapper{
+  /*padding-left: 60px;*/
+}
+.catalog-main ul{
+  list-style: none;
+}
+
+.catalog{
+  /*display: flex;*/
+}
+.catalog__header{
+  display: flex;
+}
+.catalog__header div{
+  min-height: 70px;
+}
+.catalog__filters-header-wrapper{
+  background-color: #dbdbdb;
+}
+.catalog__sorting-panel{
+  background-color: #ebebeb
+}
+.catalog__filters{
+  flex-basis:200px;
+  padding-right:70px;
+}
+.catalog__items{
+  flex-basis: 760px;
+  padding-left:70px;
+ 
+}
+.catalog__item-cards-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
