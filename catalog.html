@@ -62,33 +62,13 @@
 
 
     <div class="catalog">
-      <div class="catalog__header">
-        <div class="catalog__filters-header-wrapper">
-          <div class="wrapper">
-            <b class="catalog__filters-header">Фильтр:</b>
+      <div class="wrapper">
+        <section class="catalog__filters">
+          <div class="catalog__header">
+            <div class="catalog__filters-header-wrapper">
+              <b class="catalog__filters-header">Фильтр:</b>
+            </div>
           </div>
-        </div>
-        <div class="catalog__sorting-panel">
-          <div class="wrapper">
-            <b>Сортировка:</b>
-            <ul class="sort catalog__sort">
-              <li class="sort-type-1 catalog__sort-type-1"></li>
-              <li class="sort-type-2 catalog__sort-type-2"></li>
-              <li class="sort-type-3 catalog__sort-type-3"></li>
-            </ul>
-            <ul class="sort-order catalog__sort-order">
-              <li class="sort-order--asc">
-                <a href="#"></a>
-              </li>
-              <li class="sort-order--desc">
-                <a href="#"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <section class="catalog__filters">
-        <div class="wrapper">
           <form method="post">
             <fieldset class="filter filter-by-cost">
               <legend class="filter__name">Стоимость</legend>
@@ -119,75 +99,90 @@
             </fieldset>
             <button class="btn submit-btn" type="submit">Показать</button>
           </form>
-        </div>
-      </section>
-      <section class="catalog__items">
-        <div class="catalog__item-cards-wrapper">
-          <article class="item-card">
-            <div class="item-card__img-container">
-              <img class="item-card__img" src="img/item-1.jpg" alt="simple self-stick">
-              <div class="item-card__actions--hover">
-                <a href="#" class="btn">В корзину</a>
-                <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+        </section>
+        <section class="catalog__items">
+          <div class="catalog__sorting-panel">
+            <b>Сортировка:</b>
+            <ul class="sort catalog__sort">
+              <li class="sort-type-1 catalog__sort-type-1"></li>
+              <li class="sort-type-2 catalog__sort-type-2"></li>
+              <li class="sort-type-3 catalog__sort-type-3"></li>
+            </ul>
+            <ul class="sort-order catalog__sort-order">
+              <li class="sort-order--asc">
+                <a href="#"></a>
+              </li>
+              <li class="sort-order--desc">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="catalog__item-cards-wrapper">
+            <article class="item-card">
+              <div class="item-card__img-container">
+                <img class="item-card__img" src="img/item-1.jpg" alt="simple self-stick">
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn">В корзину</a>
+                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <a class="item-card__ref" href="#">
-              <h3 class="item-card__name">Любительская селфи-палка</h3>
-            </a>
-            <p class="item-card__price">500 руб.</p>
-          </article>
-          <article class="item-card">
-            <div class="item-card__img-container">
-              <img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick">
-              <div class="item-card__actions--hover">
-                <a href="#" class="btn">В корзину</a>
-                <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+              <a class="item-card__ref" href="#">
+                <h3 class="item-card__name">Любительская селфи-палка</h3>
+              </a>
+              <p class="item-card__price">500 руб.</p>
+            </article>
+            <article class="item-card">
+              <div class="item-card__img-container">
+                <img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick">
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn">В корзину</a>
+                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <a class="item-card__ref" href="#">
-              <h3 class="item-card__name">Профессиональная селфи-палка</h3>
-            </a>
-            <p class="item-card__price">1500 руб.</p>
-          </article>
-          <article class="item-card">
-            <div class="item-card__img-container">
-              <img class="item-card__img" src="img/item-3.jpg" alt="unsinkable self-stick">
-              <div class="item-card__actions--hover">
-                <a href="#" class="btn">В корзину</a>
-                <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+              <a class="item-card__ref" href="#">
+                <h3 class="item-card__name">Профессиональная селфи-палка</h3>
+              </a>
+              <p class="item-card__price">1500 руб.</p>
+            </article>
+            <article class="item-card">
+              <div class="item-card__img-container">
+                <img class="item-card__img" src="img/item-3.jpg" alt="unsinkable self-stick">
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn">В корзину</a>
+                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <a class="item-card__ref" href="#">
-              <h3 class="item-card__name">Непотопляемая селфи-палка</h3>
-            </a>
-            <p class="item-card__price">2500 руб.</p>
-          </article>
-          <article class="item-card">
-            <div class="item-card__img-container">
-              <img class="item-card__img" src="img/item-4.jpg" alt="followme self-stick">
-              <div class="item-card__new">New</div>
-              <div class="item-card__actions--hover">
-                <a href="#" class="btn">В корзину</a>
-                <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+              <a class="item-card__ref" href="#">
+                <h3 class="item-card__name">Непотопляемая селфи-палка</h3>
+              </a>
+              <p class="item-card__price">2500 руб.</p>
+            </article>
+            <article class="item-card">
+              <div class="item-card__img-container">
+                <img class="item-card__img" src="img/item-4.jpg" alt="followme self-stick">
+                <div class="item-card__new">New</div>
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn">В корзину</a>
+                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                </div>
               </div>
-            </div>
-            <a class="item-card__ref" href="#">
-              <h3 class="item-card__name">Селфи-палка "Следуй за мной"</h3>
-            </a>
-            <p class="item-card__price">4900 руб.</p>
-          </article>
-        </div>
-        <div class="catalog__pages-panel">
-          <a href="#" class="catalog__prev-page">Вперед</a>
-          <ul class="catalog-pages__list">
-            <li class="catalog-pages__item"><a href="">1</a></li>
-            <li class="catalog-pages__item"><a href="">2</a></li>
-            <li class="catalog-pages__item"><a href="">3</a></li>
-          </ul>
-          <a href="#" class="catalog__next-page">Назад</a>
-        </div>
-      </section>
-    </div>
+              <a class="item-card__ref" href="#">
+                <h3 class="item-card__name">Селфи-палка "Следуй за мной"</h3>
+              </a>
+              <p class="item-card__price">4900 руб.</p>
+            </article>
+          </div>
+          <div class="catalog__pages-panel">
+            <a href="#" class="catalog__prev-page">Вперед</a>
+            <ul class="catalog-pages__list">
+              <li class="catalog-pages__item"><a href="">1</a></li>
+              <li class="catalog-pages__item"><a href="">2</a></li>
+              <li class="catalog-pages__item"><a href="">3</a></li>
+            </ul>
+            <a href="#" class="catalog__next-page">Назад</a>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 
