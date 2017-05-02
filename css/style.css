@@ -88,6 +88,17 @@ ul {
 .search-form {
   width: 250px;
 }
+.search-form input[type="search"] {
+  width: 150px;
+  /*padding-left: 40px;*/
+  font-size: 15px;  
+  background-color: transparent;
+  border: none;
+}
+.search-form__submit{
+  border:none;
+  background-color: transparent;
+}
 
 .user-menu {
   font-size: 0;
@@ -209,6 +220,12 @@ main {
 
 .item-about__text {
   margin-bottom: 55px;
+}
+
+.item-about__read-more-btn{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .slider-item__number {
