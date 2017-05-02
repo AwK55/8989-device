@@ -26,6 +26,11 @@ body {
   color: rgb(70, 70, 70);
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 *[class$="--hover"]{
   display: none;
 }
