@@ -158,7 +158,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДарЭкспедиция</li>
           </ul>
-          <a href="#" class="about-us-more">Подробнее о нас</a>
+          <a  class="btn" href="#" class="about-us-more">Подробнее о нас</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__header">Контакты</h2>
@@ -170,7 +170,7 @@
               <img src="img/map.jpg" alt="" class="contacts-map__img">
             </a>
           </div>
-          <a href="#" class="contacts-feedback">Напишите нам</a>
+          <a class="btn" href="#" class="contacts-feedback">Напишите нам</a>
         </section>
       </div>
     </div>
@@ -206,6 +206,34 @@
       </div>
     </div>
   </footer>
+  <div class="modal-window modal-map-window">
+    <button class="modal-close modal-window-close" type="button" title="Закрыть">Закрыть</button>
+    <div id="yandex-map"></div>
+  </div>
+  <div class="modal-window modal-feedback">
+    <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <button class="modal-close modal-window-close" type="button" title="Закрыть">Закрыть</button>
+
+      <div class="modal-feedback__name">
+        <label for="name">Ваше имя:</label>
+        <input class="modal-feedback__input-text" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+      </div>
+
+      <div class="modal-feedback__email">
+        <label for="email">Ваш e-mail:</label>
+        <input class="modal-feedback__input-text" id="email" type="email" name="email" placeholder="Для отправки ответа">
+      </div>
+
+      <div class="modal-feedback__email">
+        <label for="email">Текст письма:</label>
+        <input class="modal-feedback__input-rich-text" type="text" name="password" placeholder="В свободной форме">
+      </div>
+
+      <button class="btn" type="submit">Войти</button>
+    </form>
+  </div>
+  <div class="modal-overlay"></div>
+
 </body>
 
 </html>
