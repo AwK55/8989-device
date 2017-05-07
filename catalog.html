@@ -11,9 +11,11 @@
 <body>
   <div class="wrapper">
     <header class="main-header">
-      <div class="main-header__header-container">
-        <a href="#" class="logo logo--black">Device</a>
-        <div class="main-header__user">
+      <div class="main-header__container">
+        <a href="#" class="logo main-header__logo">Device</a>
+        <!--на самом деле с точки зрения логики, это не правильно. 
+        к пользовательскому меню поиск никак не относится-->
+        <div class="main-header__user"> 
           <form class="search-form">
             <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
@@ -26,10 +28,10 @@
           </ul>
         </div>
         <nav class="catalog-menu">
-          <ul class="catalog__list">
-            <li class="catalog__list-item">
+          <ul class="catalog-menu__list">
+            <li class="catalog-menu__list-item">
               <a href="#">Каталог товаров</a>
-              <ul class="menu-item-catalog--hover">
+              <ul class="catalog-menu__item-types--hide">
                 <li><a href="#">Виртуальная Реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн камеры</a></li>
@@ -37,16 +39,15 @@
                 <li><a href="#">умные часы</a></li>
               </ul>
             </li>
-            <li class="catalog__list-item"><a href="#">Доставка</a></li>
-            <li class="catalog__list-item"><a href="#">Гарантия</a></li>
-            <li class="catalog__list-item"><a href="#">Контакты</a></li>
+            <li class="catalog-menu__list-item"><a href="#">Доставка</a></li>
+            <li class="catalog-menu__list-item"><a href="#">Гарантия</a></li>
+            <li class="catalog-menu__list-item"><a href="#">Контакты</a></li>
           </ul>
         </nav>
       </div>
     </header>
   </div>
-  <main class="catalog-main">
-
+  <main class="">
     <header class="catalog-header">
       <div class="wrapper">
         <h1 class="catalog-header__name">Моноподы для селфи</h2>
@@ -121,7 +122,7 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <img class="item-card__img" src="img/item-1.jpg" alt="simple self-stick">
-                <div class="item-card__actions--hover">
+                <div class="item-card__actions--hide">
                   <a href="#" class="btn">В корзину</a>
                   <a href="#" class="add-comp-btn">Добавить к сравнению</a>
                 </div>
@@ -134,7 +135,7 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick">
-                <div class="item-card__actions--hover">
+                <div class="item-card__actions--hide">
                   <a href="#" class="btn">В корзину</a>
                   <a href="#" class="add-comp-btn">Добавить к сравнению</a>
                 </div>
@@ -147,7 +148,7 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <img class="item-card__img" src="img/item-3.jpg" alt="unsinkable self-stick">
-                <div class="item-card__actions--hover">
+                <div class="item-card__actions--hide">
                   <a href="#" class="btn">В корзину</a>
                   <a href="#" class="add-comp-btn">Добавить к сравнению</a>
                 </div>
@@ -161,7 +162,7 @@
               <div class="item-card__img-container">
                 <img class="item-card__img" src="img/item-4.jpg" alt="followme self-stick">
                 <div class="item-card__new">New</div>
-                <div class="item-card__actions--hover">
+                <div class="item-card__actions--hide">
                   <a href="#" class="btn">В корзину</a>
                   <a href="#" class="add-comp-btn">Добавить к сравнению</a>
                 </div>
@@ -187,8 +188,8 @@
   </main>
 
   <footer class="main-footer">
-    <div class="wrapper main-footer__container">
-      <div class="container__row container__row-1">
+    <div class="wrapper main-footer__wrapper">
+      <div class="main-footer__row main-footer__row-1">
         <a href="#" class="logo logo--yellow">Logo</a>
         <ul class="user-menu">
           <li class="user-menu__item"><a href="#">Войти</a></li>
@@ -196,7 +197,7 @@
           <li class="user-menu__item"><a href="#">Корзина</a></li>
         </ul>
       </div>
-      <div class="container__row container__row-2">
+      <div class="main-footer__row main-footer__row-2">
         <p class="main-footer__address">г. Москва, ул. Строителей, 15 </p>
         <ul class="services-menu">
           <li class="services-menu__item"><a href="#">Доставка</a></li>
@@ -205,7 +206,7 @@
         </ul>
         <p class="main-footer__phone">Тел.: +7 (495) 495-95-95</p>
       </div>
-      <div class="container__row container__row-3">
+      <div class="main-footer__row main-footer__row-3">
         <div class="social">
           <a href="#" class="social__vk"></a>
           <a href="#" class="social__facebook"></a>
