@@ -1,0 +1,53 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-dji {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -5px;
+}
+
+.sprite-dji--hover {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -115px;
+}
+
+.sprite-go-pro--hover {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -225px;
+}
+
+.sprite-go-pro--hover {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -335px;
+}
+
+.sprite-sp-gadgets {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -445px;
+}
+
+.sprite-sp-gadgets--hover {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -555px;
+}
+
+.sprite-vive {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -665px;
+}
+
+.sprite-vive--hover {
+    width: 260px;
+    height: 100px;
+    background-position: -5px -775px;
+}

@@ -15,21 +15,23 @@
         <a href="#" class="logo main-header__logo">Device</a>
         <!--на самом деле с точки зрения логики, это не правильно. 
         к пользовательскому меню поиск никак не относится-->
-        <div class="main-header__user"> 
+        <div class="main-header__user">
           <form class="search-form">
-            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
+            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
           </form>
           <ul class="user-menu main-header__user-menu">
-            <li class="user-menu__item"><a href="#">Выйти</a></li>
-            <li class="user-menu__item"><a href="#">Сравнить</a></li>
-            <li class="user-menu__item"><a href="#">Корзина</a></li>
+            <li class="user-menu__item "><a class="icon  icon__login icon__login--black" href="#">Войти</a></li>
+            <li class="user-menu__item"><a class="icon  icon__compare icon__compare--black" href="#">Сравнить</a></li>
+            <li class="user-menu__item"><a class="icon  icon__cart icon__cart--black" href="#">Корзина</a></li>
           </ul>
         </div>
         <nav class="catalog-menu">
           <ul class="catalog-menu__list">
             <li class="catalog-menu__list-item">
-              <a href="#">Каталог товаров</a>
+              <a href="#">Каталог товаров
+                <span class="plus-sign"></span>
+              </a>
               <ul class="catalog-menu__item-types--hide">
                 <li><a href="#">Виртуальная Реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -53,27 +55,27 @@
         <ul class="slider__list">
           <li class="slider__item">
             <!--<div class="slider-item">-->
-              <div class="slider__item-container">
-                <div class="slider__img-container">
-                  <img class="slider__img" src="img/item/slider-3.png" alt="">
-                </div>
-                <div class="slider__about">
-                  <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
-                  <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
-                  <a href="#" class="btn slider__link">Подробнее</a>
-                  <div class="item-features">
-                    <div class="item-feature">
-                      <p class="item-feature__param">800 м</p>
-                      <p class="item-feature__descr">Дальность полета</p>
-                    </div>
-                    <div class="item-feature">
-                      <p class="item-feature__param">50 м</p>
-                      <p class="item-feature__descr">Радиус поражения</p>
-                    </div>
+            <div class="slider__item-container">
+              <div class="slider__img-container">
+                <img class="slider__img" src="img/item/slider-3.png" alt="">
+              </div>
+              <div class="slider__about">
+                <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
+                <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
+                <a href="#" class="btn slider__link">Подробнее</a>
+                <div class="item-features">
+                  <div class="item-feature">
+                    <p class="item-feature__param">800 м</p>
+                    <p class="item-feature__descr">Дальность полета</p>
+                  </div>
+                  <div class="item-feature">
+                    <p class="item-feature__param">50 м</p>
+                    <p class="item-feature__descr">Радиус поражения</p>
                   </div>
                 </div>
-                <p class="slider__item-number">01</p>
               </div>
+              <p class="slider__item-number">01</p>
+            </div>
             <!--</div>-->
           </li>
           <!--Dont forget add content of other slides-->
@@ -84,34 +86,34 @@
       </section>
       <section class="device-type-cards">
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img vr"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-1.png" alt="">-->
-          <h3 class="device-type-card__name">Виртуальная реальность</h3>
+          <h3 class="device-type-card__name"><a href="#">Виртуальная реальность</a></h3>
         </div>
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img monopod"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-2.png" alt="">-->
-          <h3 class="device-type-card__name">Моноподы для селфи</h3>
+          <h3 class="device-type-card__name"><a href="#">Моноподы для селфи</a></h3>
         </div>
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img action-camera"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-3.png" alt="">-->
-          <h3 class="device-type-card__name">Экшн-камеры</h3>
+          <h3 class="device-type-card__name"><a href="#">Экшн-камеры</a></h3>
         </div>
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img fitness-band"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-4.png" alt="">-->
-          <h3 class="device-type-card__name">Фитнес-браслеты</h3>
+          <h3 class="device-type-card__name"><a href="#">Фитнес-браслеты</a></h3>
         </div>
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img smart-watch"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-5.png" alt="">-->
-          <h3 class="device-type-card__name">Умные часы</h3>
+          <h3 class="device-type-card__name"><a href="#">Умные часы</a></h3>
         </div>
         <div class="device-type-card">
-          <div class="device-type-card__img"></div>
+          <a href="#"><div class="device-type-card__img quadrocopter"></div></a>
           <!--<img class="device-type-card__img" src="img/item/popular-6.png" alt="">-->
-          <h3 class="device-type-card__name">Квадракоптеры</h3>
+          <h3 class="device-type-card__name"><a href="#">Квадракоптеры</a></h3>
         </div>
       </section>
     </div>
@@ -119,9 +121,9 @@
       <div class="wrapper services__container">
         <nav class="services__menu">
           <ul class="services__menu-list">
-            <li class="services_menu-item"><a href="#">Доставка</a></li>
-            <li class="services_menu-item"><a href="#">Гарантия</a></li>
-            <li class="services_menu-item"><a href="#">Кредит</a></li>
+            <li class="services__menu-item services__menu-item--selected delivery"><a class="btn services__btn--selected" href="#">Доставка</a></li>
+            <li class="services__menu-item warranty"><a class="btn" href="#">Гарантия</a></li>
+            <li class="services__menu-item credit"><a class="btn" href="#">Кредит</a></li>
           </ul>
         </nav>
         <div class="services__description">
@@ -145,10 +147,22 @@
     </section>
     <div class="wrapper">
       <section class="brands">
-        <a href="#" class="brands__item-1"></a>
-        <a href="#" class="brands__item-2"></a>
-        <a href="#" class="brands__item-3"></a>
-        <a href="#" class="brands__item-4"></a>
+        <a class="brands__item brands__item-1" href="#">
+          <div class="brands__img brand-dji"></div>
+          <div class="brands__img--hover brand-dji--hover"></div>
+        </a>
+        <a href="#" class="brands__item brands__item-2">
+          <div class="brands__img brand-go-pro"></div>
+          <div class="brands__img--hover brand-go-pro--hover"></div>
+        </a>
+        <a href="#" class="brands__item brands__item-3">
+          <div class="brands__img brand-sp-gadgets"></div>
+          <div class="brands__img--hover brand-sp-gadgets--hover"></div>
+        </a>
+        <a href="#" class="brands__item brands__item-4">
+          <div class="brands__img brand-vive"></div>
+          <div class="brands__img--hover brand-vive--hover"></div>
+        </a>
       </section>
       <div class="contact-info">
         <section class="about-us">
@@ -160,7 +174,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДарЭкспедиция</li>
           </ul>
-          <a  class="btn" href="#" class="about-us-more">Подробнее о нас</a>
+          <a class="btn" href="#" class="about-us-more">Подробнее о нас</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__header">Контакты</h2>
@@ -177,14 +191,14 @@
       </div>
     </div>
   </main>
-   <footer class="main-footer">
+  <footer class="main-footer">
     <div class="wrapper main-footer__wrapper">
       <div class="main-footer__row main-footer__row-1">
-        <a href="#" class="logo logo--yellow">Logo</a>
+        <a href="#" class="logo logo--yellow">Device</a>
         <ul class="user-menu">
-          <li class="user-menu__item"><a href="#">Войти</a></li>
-          <li class="user-menu__item"><a href="#">Сравнить</a></li>
-          <li class="user-menu__item"><a href="#">Корзина</a></li>
+          <li class="user-menu__item"><a class="icon icon__login" href="#">Войти</a></li>
+          <li class="user-menu__item"><a class="icon icon__compare" href="#">Сравнить</a></li>
+          <li class="user-menu__item"><a class="icon icon__cart" href="#">Корзина</a></li>        
         </ul>
       </div>
       <div class="main-footer__row main-footer__row-2">
