@@ -17,8 +17,8 @@
         к пользовательскому меню поиск никак не относится-->
         <div class="main-header__user">
           <form class="search-form">
+            <input class="search-form__input search-form__icon" type="search" name="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
-            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
           </form>
           <ul class="user-menu main-header__user-menu">
             <li class="user-menu__item user-menu__acc-name"><a class="icon icon__login icon__login--black" href="#">Валентин Петухов</a></li>
@@ -32,7 +32,7 @@
             <li class="catalog-menu__list-item catalog-menu__submenu">
               <a class="temp" href="#">
                 <span>Каталог товаров</span>
-                <span class="plus-sign"></span>
+                <div class="plus-sign"></div>
               </a>
               <ul class="catalog-menu__item-types--hide">
                 <li><a href="#">Виртуальная Реальность</a></li>
@@ -84,10 +84,14 @@
               <input class="filter__range-input" type="range" id="filter__range" name="filter__range">
               <div class="range-controls filter__range">
                 <div class="scale">
-                  <div class="bar"></div>
+                  <div class="bar" style="margin-left: 0%; width: 80%"></div>
                 </div>
                 <div class="range-toggle range-toggle-min"></div>
                 <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
               </div>
             </fieldset>
             <fieldset class="filter filter-color">
@@ -156,9 +160,9 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <a href="#"><img class="item-card__img" src="img/item-1.jpg" alt="simple self-stick"></a>
-                <div class="item-card__actions--hide">
-                  <a href="#" class="btn">В корзину</a>
-                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn item-card__cart-btn">В корзину</a>
+                  <a href="#" class="item-card__add-comp-btn">Добавить к сравнению</a>
                 </div>
               </div>
               <div class="item-card__descr">
@@ -171,9 +175,9 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <a href="#"><img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick"></a>
-                <div class="item-card__actions--hide">
-                  <a href="#" class="btn">В корзину</a>
-                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                <div class="item-card__actions--hover">
+                   <a href="#" class="btn item-card__cart-btn">В корзину</a>
+                  <a href="#" class="item-card__add-comp-btn">Добавить к сравнению</a>
                 </div>
               </div>
               <div class="item-card__descr">
@@ -186,9 +190,9 @@
             <article class="item-card">
               <div class="item-card__img-container">
                 <a href="#"><img class="item-card__img" src="img/item-3.jpg" alt="unsinkable self-stick"></a>
-                <div class="item-card__actions--hide">
-                  <a href="#" class="btn">В корзину</a>
-                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn item-card__cart-btn">В корзину</a>
+                  <a href="#" class="item-card__add-comp-btn">Добавить к сравнению</a>
                 </div>
               </div>
               <div class="item-card__descr">
@@ -202,9 +206,9 @@
               <div class="item-card__img-container">
                 <a href="#"><img class="item-card__img" src="img/item-4.jpg" alt="followme self-stick"></a>
                 <div class="item-card__new">New</div>
-                <div class="item-card__actions--hide">
-                  <a href="#" class="btn">В корзину</a>
-                  <a href="#" class="add-comp-btn">Добавить к сравнению</a>
+                <div class="item-card__actions--hover">
+                  <a href="#" class="btn item-card__cart-btn">В корзину</a>
+                  <a href="#" class="item-card__add-comp-btn">Добавить к сравнению</a>
                 </div>
               </div>
               <div class="item-card__descr">
@@ -234,9 +238,9 @@
       <div class="main-footer__row main-footer__row-1">
         <a href="#" class="logo logo--yellow">Device</a>
         <ul class="user-menu">
-          <li class="user-menu__item"><a class="icon icon__login" href="#">Выйти</a></li>
+          <li class="user-menu__item"><a class="icon icon__login" href="#">Войти</a></li>
           <li class="user-menu__item"><a class="icon icon__compare" href="#">Сравнить</a></li>
-          <li class="user-menu__item"><a class="icon icon__cart" href="#">Корзина</a></li>
+          <li class="user-menu__item"><a class="icon icon__cart" href="#">Корзина</a></li>        
         </ul>
       </div>
       <div class="main-footer__row main-footer__row-2">
@@ -244,18 +248,18 @@
         <ul class="services-menu">
           <li class="services-menu__item"><a href="#">Доставка</a></li>
           <li class="services-menu__item"><a href="#">Гарантия</a></li>
-          <li class="services-menu__item"><a href="#">Кредит</a></li>
+          <li class="services-menu__item"><a href="#">Конткаты</a></li>
         </ul>
         <p class="main-footer__phone">Тел.: +7 (495) 495-95-95</p>
       </div>
       <div class="main-footer__row main-footer__row-3">
+        <div class="main-footer__stick"></div>
         <div class="social">
-          <a href="#" class="social__vk"></a>
-          <a href="#" class="social__facebook"></a>
-          <a href="#" class="social__twitter"></a>
+          <a href="#" class="icon icon__facebook social__facebook"></a>
+          <a href="#" class="icon icon__insta social__insta"></a>
+          <a href="#" class="icon icon__twitter social__twitter"></a>
         </div>
-        <a href="#" class="main-footer__ha-logo">
-          <img class="main-footer__img" src="" alt="">
+        <a href="https://htmlacademy.ru" target="_blank" class="main-footer__ha-logo icon icon__htmlacademy">
         </a>
       </div>
     </div>
