@@ -1515,6 +1515,7 @@ margin-right: 35px;
 .item-card {
   margin-bottom: 30px;
   width: 360px;
+  position: relative;
 }
 
 .item-card__img-container {
@@ -1583,7 +1584,8 @@ a.item-card__add-comp-btn:active{
   letter-spacing: 0.01em;
 }
 
-.item-card__new {
+.item-card--new::after {
+  content: "New";
   position: absolute;
   top: 29px;
   right: 27px;
