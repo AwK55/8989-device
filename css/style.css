@@ -1706,7 +1706,8 @@ a.catalog-pages__selected:active{
   background-color: white;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
-.modal-feedback--show{
+.modal-feedback--show,
+.modal-window--show{
   display: block;
   animation: bounce 0.6s;
 }

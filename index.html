@@ -320,6 +320,7 @@
   </footer>
   <div class="modal-window modal-map-window">
     <button class="modal-close modal-window-close" type="button" title="Закрыть">Закрыть</button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4498.227856325654!2d37.529704!3d55.687007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sru!4v1494494427384" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
     <div id="yandex-map"></div>
   </div>
   <div class="modal-window modal-feedback">
@@ -393,6 +394,29 @@
           if (popup.classList.contains("modal-feedback--show")) {
             popup.classList.remove("modal-feedback--show");
             // popup.classList.remove("modal-error");
+          }
+        }
+      });
+
+      var mapOpen = document.querySelector(".contacts-map__ref");
+
+      var mapPopup = document.querySelector(".modal-map-window");
+      var mapClose = mapPopup.querySelector(".modal-close");
+
+      mapOpen.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.add("modal-window--show");
+      });
+
+      mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("modal-window--show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (mapPopup.classList.contains("modal-window--show")) {
+            mapPopup.classList.remove("modal-window--show");
           }
         }
       });
