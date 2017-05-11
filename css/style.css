@@ -371,10 +371,11 @@ input[type="search"]:focus{
 
 .plus-sign {
   position: relative;
-  display: inline-block;
+  /*display: inline-block;
   width: 16px;
-  height: 16px;
-  cursor: pointer;
+  height: 16px;*/
+  /*cursor: pointer;
+  vertical-align: middle;*/
 }
 
 .plus-sign::before,
@@ -382,8 +383,8 @@ input[type="search"]:focus{
   content: '';
   width: 16px;
   height: 3px;
-  top: 8px;
-  right: -2px;
+  top: 13px;
+  right: -30px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 1px;
@@ -469,6 +470,8 @@ input[type="search"]:focus{
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 
