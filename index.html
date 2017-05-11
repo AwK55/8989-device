@@ -323,7 +323,7 @@
     <div id="yandex-map"></div>
   </div>
   <div class="modal-window modal-feedback">
-    <form class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+    <form id="feedback" class="modal-feedback__form" action="https://echo.htmlacademy.ru" method="post">
       <button class="modal-close modal-window-close" type="button" title="Закрыть">Закрыть</button>
 
       <div class="modal-feedback__name">
@@ -337,15 +337,66 @@
       </div>
 
       <div class="modal-feedback__email">
-        <label for="email">Текст письма:</label>
-        <input class="modal-feedback__input-rich-text" type="text" name="password" placeholder="В свободной форме">
+        <label for="letter">Текст письма:</label>
+        <textarea form="feedback" class="modal-feedback__input-rich-text" rows="10" cols="50" placeholder="В свободной форме"></textarea>
+        <!--<input  type="textarea" name="letter" placeholder="В свободной форме">-->
       </div>
 
-      <button class="btn" type="submit">Войти</button>
+      <button class="btn submit-btn" type="submit">Отправить</button>
     </form>
   </div>
   <div class="modal-overlay"></div>
+  <script>
+      var link = document.querySelector(".contacts-feedback");
 
+      var popup = document.querySelector(".modal-feedback");
+      var close = popup.querySelector(".modal-window-close");
+
+      var form = popup.querySelector("form");
+      var name = popup.querySelector("[name=name]");
+      var email = popup.querySelector("[name=email]");
+
+      var storage = localStorage.getItem("login");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-feedback--show");
+
+        if (storage) {
+          name.value = storage;
+          email.focus();
+        } else {
+          name.focus();
+        }
+
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-feedback--show");
+        // popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function(event) {
+        if (!login.value || !password.value) {
+          event.preventDefault();
+          // popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          // popup.classList.add("modal-error");
+        } else {
+          localStorage.setItem("name", name.value);
+        }
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-feedback--show")) {
+            popup.classList.remove("modal-feedback--show");
+            // popup.classList.remove("modal-error");
+          }
+        }
+      });
+    </script>
 </body>
 
 </html>
