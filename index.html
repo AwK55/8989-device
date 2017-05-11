@@ -13,11 +13,10 @@
     <header class="main-header">
       <div class="main-header__container">
         <a href="#" class="logo main-header__logo">Device</a>
-        <!--на самом деле с точки зрения логики, это не правильно. 
-        к пользовательскому меню поиск никак не относится-->
         <div class="main-header__user">
           <form class="search-form">
-            <input class="search-form__input search-form__icon" type="search" name="search" placeholder="Поиск по сайту">
+            <span class="search-form__icon"></span>
+            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
           </form>
           <ul class="user-menu main-header__user-menu">
@@ -30,15 +29,18 @@
           <ul class="catalog-menu__list">
             <li class="catalog-menu__list-item">
               <a href="#">Каталог товаров
-                <span class="plus-sign"></span>
               </a>
-              <ul class="catalog-menu__item-types--hide">
-                <li><a href="#">Виртуальная Реальность</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Экшн камеры</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">умные часы</a></li>
-              </ul>
+              <span class="plus-sign"></span>
+              <div class="catalog-menu__submenu">
+                <ul class="catalog-menu__item-types--hover">
+                  <li><a href="#">Виртуальная Реальность</a></li>
+                  <li><a href="#">Фитнес-браслеты</a></li>
+                  <li><a href="#">Квадрокоптеры</a></li>
+                  <li><a href="#">Моноподы для селфи</a></li>
+                  <li><a href="#">Умные часы</a></li>
+                  <li><a href="#">Экшн камеры</a></li>
+                </ul>
+              </div>
             </li>
             <li class="catalog-menu__list-item"><a href="#">Доставка</a></li>
             <li class="catalog-menu__list-item"><a href="#">Гарантия</a></li>
@@ -53,43 +55,6 @@
     <div class="wrapper">
       <section class="slider">
         <ul class="slider__list">
-          <li class="slider__item">
-            <!--<div class="slider-item">-->
-            <div class="slider__item-container">
-              <div class="slider__img-container">
-                <img class="slider__img" src="img/item/slider-3.png" alt="">
-              </div>
-              <div class="slider__about">
-                <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
-                <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
-                <a href="#" class="btn slider__link">Подробнее</a>
-                <div class="item-features">
-                  <div class="item-feature">
-                    <p class="item-feature__param">800 м</p>
-                    <p class="item-feature__descr">Дальность полета</p>
-                  </div>
-                  <div class="item-feature">
-                    <p class="item-feature__param">50 м</p>
-                    <p class="item-feature__descr">Радиус поражения</p>
-                  </div>
-                </div>
-                <ul class="slider__switcher">
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
-                  </li>
-                </ul>
-              </div>
-              <p class="slider__item-number">01</p>
-            </div>
-            <!--</div>-->
-          </li>
-          <!--Dont forget add content of other slides-->
           <li class="slider__item slider__item--hide">
             <div class="slider__item-container">
               <div class="slider__img-container">
@@ -97,8 +62,22 @@
               </div>
               <div class="slider__about">
                 <b class="slider__title">Делай селфи, как Бен Стиллер! </b>
-                <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a href="#" class="btn slider__link">Подробнее</a>
+                <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего
+                  5 килограмм.</p>
+                 <div class="slider__el-container">
+                  <a href="#" class="btn slider__link">Подробнее</a>
+                  <ul class="slider__switcher">
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
+                    </li>
+                  </ul>
+                </div>
                 <div class="item-features">
                   <div class="item-feature">
                     <p class="item-feature__param">8.5 м</p>
@@ -112,18 +91,7 @@
                     <p class="item-feature__param">Карбон</p>
                     <p class="item-feature__descr">Материал</p>
                   </div>
-                </div>
-                <ul class="slider__switcher">
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
-                  </li>
-                </ul>
+                </div>                
               </div>
               <p class="slider__item-number">01</p>
             </div>
@@ -136,27 +104,67 @@
               <div class="slider__about">
                 <b class="slider__title">Худеем правильно!</b>
                 <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <a href="#" class="btn slider__link">Подробнее</a>
+                 <div class="slider__el-container">
+                  <a href="#" class="btn slider__link">Подробнее</a>
+                  <ul class="slider__switcher">
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
+                    </li>
+                  </ul>
+                </div>
                 <div class="item-features">
                   <div class="item-feature">
                     <p class="item-feature__param">48 часов</p>
                     <p class="item-feature__descr">Без подзарядки</p>
                   </div>
-                </div>
-                <ul class="slider__switcher">
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el" href=""></a>
-                  </li>
-                  <li>
-                    <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
-                  </li>
-                </ul>
+                </div>                
               </div>
-              <p class="slider__item-number">01</p>
+              <p class="slider__item-number">02</p>
             </div>
+          </li>
+          <li class="slider__item ">
+            <!--<div class="slider-item">-->
+            <div class="slider__item-container">
+              <div class="slider__img-container">
+                <img class="slider__img" src="img/item/slider-3.png" alt="">
+              </div>
+              <div class="slider__about">
+                <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
+                <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
+                <div class="slider__el-container">
+                  <a href="#" class="btn slider__link">Подробнее</a>
+                  <ul class="slider__switcher">
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el" href=""></a>
+                    </li>
+                    <li>
+                      <a class="slider__switcher-el slider__switcher-el--selected" href=""></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-features">
+                  <div class="item-feature">
+                    <p class="item-feature__param">800 м</p>
+                    <p class="item-feature__descr">Дальность полета</p>
+                  </div>
+                  <div class="item-feature">
+                    <p class="item-feature__param">50 м</p>
+                    <p class="item-feature__descr">Радиус поражения</p>
+                  </div>
+                </div>
+              </div>
+              <p class="slider__item-number">03</p>
+            </div>
+            <!--</div>-->
           </li>
         </ul>
       </section>
@@ -286,7 +294,7 @@
         <ul class="user-menu">
           <li class="user-menu__item"><a class="icon icon__login" href="#">Войти</a></li>
           <li class="user-menu__item"><a class="icon icon__compare" href="#">Сравнить</a></li>
-          <li class="user-menu__item"><a class="icon icon__cart" href="#">Корзина</a></li>        
+          <li class="user-menu__item"><a class="icon icon__cart" href="#">Корзина</a></li>
         </ul>
       </div>
       <div class="main-footer__row main-footer__row-2">
