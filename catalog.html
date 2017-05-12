@@ -13,25 +13,22 @@
     <header class="main-header main-header-catalog">
       <div class="main-header__container">
         <a href="./index.html" class="logo main-header__logo">Device</a>
-        <!--на самом деле с точки зрения логики, это не правильно. 
-        к пользовательскому меню поиск никак не относится-->
         <div class="main-header__user">
-         <form class="search-form search-form__icon">
+          <form class="search-form search-form__icon">
             <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
             <input class="search-form__submit" type="submit" value="Найти">
           </form>
           <ul class="user-menu main-header__user-menu">
-            <li class="user-menu__item user-menu__acc-name"><a class="icon icon__login icon__login--black" href="#">Валентин Петухов</a></li>
+            <li class="user-menu__item user-menu__acc-name"><a class="icon icon__login icon__login--black" href="/profile/id8989">Андрей Киселёв</a></li>
             <li class="user-menu__item exit"><a class="exit" href="#">Выйти</a></li>
             <li class="user-menu__item"><a class="icon icon__compare icon__compare--black" href="#">Сравнить</a></li>
             <li class="user-menu__item"><a class="icon icon__cart icon__cart--black" href="#">Корзина</a></li>
           </ul>
         </div>
-       <nav class="catalog-menu">
+        <nav class="catalog-menu">
           <ul class="catalog-menu__list">
             <li class="catalog-menu__list-item">
               <a class="plus-sign" href="#">Каталог товаров</a>
-              <!--<span class="plus-sign"></span>-->
               <div class="catalog-menu__submenu">
                 <ul class="catalog-menu__item-types--hover">
                   <li><a href="#">Виртуальная Реальность</a></li>
@@ -76,11 +73,10 @@
               <b>Фильтр:</b>
             </div>
           </div>
-          <form method="post">
+          <form method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="filter filter-by-cost">
               <b class="filter__name">Стоимость</b>
               <label class="filter__bluetooth" for="filter__range"></label>
-              <!--Пока так, как покажут, как сделать фильтр с двумя ползунками -поправлю-->
               <input class="filter__range-input" type="range" id="filter__range" name="filter__range">
               <div class="range-controls filter__range">
                 <div class="scale">
@@ -176,7 +172,7 @@
               <div class="item-card__img-container">
                 <a href="#"><img class="item-card__img" src="img/item-2.jpg" alt="prof self-stick"></a>
                 <div class="item-card__actions--hover">
-                   <a href="#" class="btn item-card__cart-btn">В корзину</a>
+                  <a href="#" class="btn item-card__cart-btn">В корзину</a>
                   <a href="#" class="item-card__add-comp-btn">Добавить к сравнению</a>
                 </div>
               </div>
@@ -232,7 +228,7 @@
     </div>
   </main>
 
-   <footer class="main-footer">
+  <footer class="main-footer">
     <div class="wrapper main-footer__wrapper">
       <div class="main-footer__row main-footer__row-1">
         <a href="#" class="logo logo--yellow">Device</a>
@@ -258,7 +254,7 @@
           <a href="#" class="icon icon__insta social__insta"></a>
           <a href="#" class="icon icon__twitter social__twitter"></a>
         </div>
-        <a href="https://htmlacademy.ru" target="_blank" class="main-footer__ha-logo icon icon__htmlacademy">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" class="main-footer__ha-logo icon icon__htmlacademy">
         </a>
       </div>
     </div>
