@@ -573,7 +573,8 @@ main{
 }
 
 .slider__about {
-  flex-basis: 500px;
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
   padding-left: 40px;
   padding-top: 76px;
   position: relative;
@@ -959,7 +960,8 @@ a.brands__item:active {
 }
 .brands__img:hover + .brands__img--hover{
   opacity: 1;
-  animation: show--hover 0.5s forwards;
+  -webkit-animation: show--hover 0.5s forwards;
+          animation: show--hover 0.5s forwards;
 }
 
 .brands__img:hover {
@@ -983,6 +985,15 @@ a.brands__item:active {
   }
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes show--hover {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
